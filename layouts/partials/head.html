@@ -28,10 +28,10 @@
 
 	<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
 	{{ with .Site.Params.twitter_username }}
-		<link rel="me" href="https://twitter.com/{{ . }}" />
+		<link rel="me" href="https://twitter.com/x5gtrn" />
 	{{ end }}
 	{{ with .Site.Params.github_username }}
-		<link rel="me" href="https://github.com/{{ . }}" />
+		<link rel="me" href="https://github.com/x5gtrn" />
 	{{ end }}
 	{{ with .Site.Params.instagram_username }}
 		<link rel="me" href="https://instagram.com/{{ . }}" />
@@ -48,4 +48,13 @@
     {{ range $filename := .Site.Params.plugins_html }}
     	{{ partial $filename $ }}
     {{ end }}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49749635-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-49749635-1');
+	</script>
 </head>
